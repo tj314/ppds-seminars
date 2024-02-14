@@ -1,5 +1,7 @@
 # Seminar examples 2024
+This is the branch for the code examples from the 2024 seminars.
 
-This is the ranch for the code examples from the 2024 seminars.
+The source code from each seminar can be found in its respective directory.
 
-The sources from each seminars can be found in their respective directories.
+## General instructions
+These examples are tested with `Python 3.12.x`. You also need to install `fei.ppds`.
