@@ -1,5 +1,5 @@
-# Seminar examples
+# Seminar examples 2024
 
-This repository contains code examples from the seminars of the course PPDS (Parallel programming and distributed systems) taught at FEI STU.
+This is the ranch for the code examples from the 2024 seminars.
 
-The examples are organised in branches. For instance, the examples from the 2024 seminars are in the `ppds2024` branch.
+The sources from each seminars can be found in their respective directories.
