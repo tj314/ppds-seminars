@@ -16,15 +16,7 @@ class Shared:
 
 
 def crossroads(shared, tid):
-    """This function simulates a deeply philosophical and metaphysical question.
-
-    The question is: "Which road should I take?" To some extent,
-    it is similar to the question of whether to lock a mutex or not.
-    Considering the general nature of a semaphore, it is, without a doubt,
-    a better suited way to answer such profound questions.
-    More precisely, this problem is a perfect foray into the epistemology
-    (and consequently ontology) of oneself.
-    """
+    """This function simulates a crossroads."""
     for _ in range(3):
         shared.semaphore.wait()
         print(f"Thread {tid} is on the crossroads.")
