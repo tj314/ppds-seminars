@@ -1,4 +1,4 @@
-"""This module implements code examples from the seminar 1."""
+"""This module implements mutex examples from the seminar 1."""
 
 __authors__ = "Marián Šebeňa, Tomáš Vavro"
 __license__ = "MIT"
