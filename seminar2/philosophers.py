@@ -1,5 +1,4 @@
-"""
-Program for educational purpose. (Dining philosophers)
+"""Program for educational purpose. (Dining philosophers)
 
 University: STU Slovak Technical University in Bratislava
 Faculty: FEI Faculty of Electrical Engineering and Information Technology
@@ -18,8 +17,8 @@ from random import randint
 class Shared:
     """Represents shared data."""
     def __init__(self, num_philosophers):
-        self.num_philosophers = num_philosophers
-        self.forks = [Semaphore(1) for _ in range(num_philosophers)]
+        # TODO: Initialize the forks
+        pass
 
 
 def think(tid):
@@ -37,12 +36,11 @@ def eat(tid):
 def philosopher(shared, tid):
     """Simulates a philosopher."""
     while True:
-        think(tid)
-        shared.forks[tid].wait()
-        shared.forks[(tid + 1) % shared.num_philosophers].wait()
-        eat(tid)
-        shared.forks[tid].signal()
-        shared.forks[(tid + 1) % shared.num_philosophers].signal()
+        # TODO: Simulate thinking
+        # TODO: Simulate taking the forks
+        # TODO: Simulate eating
+        # TODO: Simulate putting the forks
+        pass
 
 
 def main():
