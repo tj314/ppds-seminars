@@ -44,6 +44,10 @@ def writer(shared, tid):
 
 
 def main():
+    """This function represents the entry point of the program.
+
+    It creates the shared data and the threads for readers and writers.
+    """
     num_readers = 5
     num_writers = 10
     shared = Shared()
