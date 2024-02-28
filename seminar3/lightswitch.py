@@ -4,17 +4,28 @@ __author__ = "Tomáš Vavro"
 __email__ = "tomas.vavro@stuba.sk"
 __license__ = "MIT"
 
+from fei.ppds import Semaphore
+
 
 class LightSwitch:
     """This class implements the LightSwitch data type."""
     def __init__(self):
-        # TODO: Implement the initialization of the LightSwitch data type
-        pass
+        """Initialize the LightSwitch object."""
+        self.counter = 0
+        self.mutex = Semaphore(1)
 
     def lock(self, semaphore):
-        # TODO: Implement the locking mechanism
-        pass
+        """Lock the LightSwitch."""
+        self.mutex.wait()
+        self.counter += 1
+        if self.counter == 1:
+            semaphore.wait()
+        self.mutex.signal()
 
     def unlock(self, semaphore):
-        # TODO: Implement the unlocking mechanism
-        pass
+        """Unlock the LightSwitch."""
+        self.mutex.wait()
+        self.counter -= 1
+        if self.counter == 0:
+            semaphore.signal()
+        self.mutex.signal()
