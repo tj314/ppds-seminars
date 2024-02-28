@@ -15,7 +15,7 @@ class Shared:
     def __init__(self):
         self.ls = LightSwitch()
         self.lock = Semaphore(1)
-        self.writers_priority = Semaphore(1)
+        self.turnstile = Semaphore(1)
 
 
 def reader(shared, tid):
@@ -25,12 +25,10 @@ def reader(shared, tid):
     :param tid: thread id
     """
     while True:
-        # turnstile to ensure readers priority
-        shared.writers_priority.wait()
-        shared.writers_priority.signal()
-
-        # reading
+        shared.turnstile.wait()
         shared.ls.lock(shared.lock)
+        shared.turnstile.signal()
+
         print(f"Reader {tid} is reading.")
         sleep(0.1)
         shared.ls.unlock(shared.lock)
@@ -45,12 +43,12 @@ def writer(shared, tid):
     :param tid: thread id
     """
     while True:
-        shared.writers_priority.wait()
+        shared.turnstile.wait()
         shared.lock.wait()
         print(f"Writer {tid} is writing.")
         sleep(0.2)
         shared.lock.signal()
-        shared.writers_priority.signal()
+        shared.turnstile.signal()
         print(f"Writer {tid} finished writing.")
         sleep(0.5)  # simulate the time between two consecutive writings
 
