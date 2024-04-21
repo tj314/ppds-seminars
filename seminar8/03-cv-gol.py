@@ -1,3 +1,7 @@
+# Conway's game of life in Python / CUDA C
+# written by Brian Tuomanen for "Hands on GPU Programming with Python and CUDA"
+# converted to numba by Roderik Ploszek
+
 from numba import cuda
 import numpy as np
 import matplotlib.pyplot as plt
