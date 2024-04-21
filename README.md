@@ -18,3 +18,4 @@ Seminar 9 requires `mpi4py` installed and properly configured on the system.
 Lecture 8 requires `numba` and `cuda-python` modules along with CUDA toolkit installed on the system.
 
 8. [Lecture 8](lecture8): CUDA Programming with Numba
+11. [Lecture 11](lecture11): Introduction to coroutines through enhanced generators
