@@ -11,6 +11,7 @@ These examples are tested with `Python 3.12.x`. You also need to install [fei.pp
 2. [Seminar 2](seminar2): Signalization and Barriers. The barbershop problem. The dining philosophers problem.
 8. [Seminar 8](seminar8): CUDA Programming
 9. [Seminar 9](seminar9): MPI exercises
+11. [Seminar 11](seminar11): Iterators, generators and coroutines via enhanced generators
 
 Seminar 9 requires `mpi4py` installed and properly configured on the system.
 
