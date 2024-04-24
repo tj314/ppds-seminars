@@ -83,7 +83,7 @@ def main():
     if len(sys.argv) < 3:
         print('usage: grep.py string... file', file=sys.stderr)
         sys.exit(-1)
-    _file = open(sys.argv[-1])
+    file_ = open(sys.argv[-1])
     substrings = sys.argv[1:-1]
     greps = []
 
@@ -93,7 +93,7 @@ def main():
         greps.append(g)
 
     d = dispatch(greps)
-    cat(_file, d)
+    cat(file_, d)
 
 
 if __name__ == '__main__':

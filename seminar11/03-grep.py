@@ -64,13 +64,13 @@ def main():
     if len(sys.argv) < 3:
         print('usage: grep.py string... file', file=sys.stderr)
         sys.exit(-1)
-    file = open(sys.argv[-1])
+    file_ = open(sys.argv[-1])
     substring = sys.argv[1]
 
     c = count(substring)
     g = grep(substring, c)
 
-    cat(file, g)
+    cat(file_, g)
 
 
 if __name__ == '__main__':
