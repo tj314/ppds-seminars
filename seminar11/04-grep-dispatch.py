@@ -4,6 +4,8 @@ from typing import TextIO, Callable
 
 
 def consumer(func: Callable) -> Callable:
+    """Call `next` automatically on a generator."""
+
     def wrapper(*args, **kw):
         it = func(*args, **kw)
         next(it)
@@ -15,8 +17,13 @@ def consumer(func: Callable) -> Callable:
     return wrapper
 
 
-def cat(_file: TextIO, gen: Generator[None, str, None]):
-    for line in _file:
+def cat(file_: TextIO, gen: Generator[None, str, None]):
+    """Read file line after line.
+
+    :param file_: file object from which to read.
+    :param gen: coroutine to which the line will be sent.
+    """
+    for line in file_:
         gen.send(line)
     gen.close()
 
@@ -25,6 +32,11 @@ def cat(_file: TextIO, gen: Generator[None, str, None]):
 def grep(
     substring: str, gen: Generator[None, int, None]
 ) -> Generator[None, str, None]:
+    """Count number of occurences of a string `substring`.
+
+    :param gen: coroutine to which the number of occurences will be
+    sent.
+    """
     try:
         while True:
             line = yield
@@ -35,6 +47,11 @@ def grep(
 
 @consumer
 def count(substring: str) -> Generator[None, int, None]:
+    """Count number of occurences of a string `substring`.
+
+    :param gen: coroutine to which the number of occurences will be
+    sent.
+    """
     n = 0
     try:
         while True:
@@ -47,6 +64,11 @@ def count(substring: str) -> Generator[None, int, None]:
 def dispatch(
     greps: Iterable[Generator[None, str, None]]
 ) -> Generator[None, str, None]:
+    """Sum received values.
+
+    The result will be printed on the screen after this coroutine is
+    closed.
+    """
     try:
         while True:
             line = yield

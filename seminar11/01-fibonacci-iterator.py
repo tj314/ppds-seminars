@@ -1,4 +1,5 @@
 class Fibonacci:
+    """Generate Fibonacci sequence."""
     def __init__(self, limit: int):
         self.a = 0
         self.b = 1
