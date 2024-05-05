@@ -20,3 +20,4 @@ Lecture 8 requires `numba` and `cuda-python` modules along with CUDA toolkit ins
 
 8. [Lecture 8](lecture8): CUDA Programming with Numba
 11. [Lecture 11](lecture11): Introduction to coroutines through enhanced generators
+12. [Lecture 12](lecture12): Asynchronous programming with asyncio
