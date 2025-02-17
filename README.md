@@ -1,5 +1,17 @@
-# Seminar examples
+# Seminar and lecture examples 2025
 
-This repository contains code examples from the seminars of the course PPDS (Parallel programming and distributed systems) taught at FEI STU.
+This is the branch for the code examples from the 2025 seminars and lectures.
 
-The examples are organised in branches. For instance, the examples from the 2024 seminars are in the `ppds2024` branch.
+The source code from each seminar and lecture can be found in its respective directory.
+
+## General instructions
+
+These examples are tested with `Python 3.12.x`. You also need to install [fei.ppds](https://pypi.org/project/fei.ppds/) library. We highly recommend using a [virtual environment](https://docs.python.org/3/library/venv.html).
+
+## Overview of the 2024 seminars (WIP)
+
+The sources for the seminars will be added throughout the semester.
+
+## Overview of the 2025 lectures
+
+The sources for the lectures will be added here throughout the semester.
