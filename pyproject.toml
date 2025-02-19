@@ -1,0 +1,29 @@
+# ruff configuration for PEP 8 and PEP 257
+[tool.ruff]
+# According to PEP 8
+line-length = 79
+target-version = "py313"
+# Turn on all possible fixes
+unsafe-fixes = true
+
+[tool.ruff.lint]
+# Turn on all checks
+preview = true
+# E - errors accrding to pycodestyle (PEP 8)
+# W - warnings according to pycodestyle (PEP 8), considered as errors
+# N - naming conventions according to PEP 8
+# D - pydocstyle (PEP 257)
+select = ["E", "W", "N", "D"]
+# D204 (line after docstring) should not be applied for PEP 257, that's a bug
+ignore = ["D204"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "pep257"
+
+[tool.ruff.lint.pycodestyle]
+# According to PEP 8
+max-doc-length = 72
+
+[tool.ruff.format]
+# PEP 8 doesn't enforce type of quotes
+quote-style = "preserve"
