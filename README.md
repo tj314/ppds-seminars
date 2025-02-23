@@ -16,4 +16,4 @@ The sources for the seminars will be added throughout the semester.
 
 ## Overview of the 2025 lectures
 
-The sources for the lectures will be added here throughout the semester.
+1. [Lecture 1](lecture1): Some example programs to test the programming environment.
