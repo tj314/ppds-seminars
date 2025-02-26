@@ -10,12 +10,12 @@ from fei.ppds import Thread, Semaphore, print, Event
 class TreeBarrier:
     """This class implements a tree barrier.
 
-    It is assumed that the number of threads is a power of 2.
+    It is assumed that the number of threads is in the form (2^k - 1).
     """
     def __init__(self, num_threads: int):
         """Initialize the tree barrier."""
-        if not math.log2(num_threads).is_integer():
-            raise ValueError("num_threads must be a power of 2.")
+        if not math.log2(num_threads + 1).is_integer():
+            raise ValueError("num_threads must be in the form (2^k - 1).")
         self.num_threads = num_threads
         self.in_semaphores = [Semaphore(0) for _ in range(num_threads)]
         self.out_semaphores = [Semaphore(0) for _ in range(num_threads)]
