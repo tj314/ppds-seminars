@@ -10,9 +10,9 @@ These examples are tested with `Python 3.12.x`. You also need to install [fei.pp
 
 ruff will help you to keep your code in accordance with PEP 8 and PEP 257. See the [instructions in Slovak here](README.ruff.sk.md).
 
-## Overview of the 2024 seminars (WIP)
+## Overview of the 2025 seminars
 
-The sources for the seminars will be added throughout the semester.
+1. [Seminar 2](seminar2): Sources containing some solutions to the Fibonacci problem, the dining philosophers problem and the tree barrier. Also contains the template for the assignment.
 
 ## Overview of the 2025 lectures
 
