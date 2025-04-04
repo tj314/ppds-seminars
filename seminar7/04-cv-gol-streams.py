@@ -117,7 +117,7 @@ for window, lattice_gpu, stream in zip(ax, lattices_gpu, streams):
 ani = animation.FuncAnimation(
     fig,
     update_gpu,
-    fargs=(imgs, new_lattices_gpu, lattices_gpu, N, streams, NUM_CONCURRENT),
+    fargs=(imgs, new_lattices_gpu, lattices_gpu, N, streams),
     interval=33,
     frames=1000,
 )
