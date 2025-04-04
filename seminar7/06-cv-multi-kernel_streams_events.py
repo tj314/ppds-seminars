@@ -64,6 +64,6 @@ for start_event, end_event in zip(start_events, end_events):
     kernel_times.append(cuda.event_elapsed_time(start_event, end_event))
 
 print(f'Total time: {t_end - t_start:.2f}')
-print(f'Mean kernel duration (milliseconds): {np.mean(kernel_times):.2f}')
+print(f'Mean kernel duration (milliseconds): {np.mean(kernel_times[1:]):.2f}')
 print('Mean kernel standard deviation (milliseconds): ', end='')
-print(f'{np.std(kernel_times):.2f}')
+print(f'{np.std(kernel_times[1:]):.2f}')
