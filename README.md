@@ -19,5 +19,6 @@ ruff will help you to keep your code in accordance with PEP 8 and PEP 257. See t
 ## Overview of the 2025 lectures
 Lecture 7 requires `numba` and `cuda-python` modules along with CUDA toolkit installed on the system.
 
-1. [Lecture 1](lecture1): Some example programs to test the programming environment.
-7. [Lecture 7](lecture7): CUDA Programming with Numba.
+1.  [Lecture 1](lecture1): Some example programs to test the programming environment.
+7.  [Lecture 7](lecture7): CUDA Programming with Numba.
+12. [Lecture 12](lecture12): Introduction to coroutines through enhanced generators
