@@ -1,0 +1,16 @@
+* Vstupy
+
+V priečinku sa nachádza päť testovacích vstupov k úlohe /2 Úroda pšenice/:
+
+- in-assignment.txt :: Maličký vstup zo zadania.
+- in-edges.txt :: Obdĺžniky, ktoré sa dotýkajú okrajmi + jeden prekrývajúci sa
+  úplne. Môže to spôsobiť problémy nekorektným implementáciám.
+- in-big.txt :: Veľa obdĺžnikov.
+- in-bigger.txt :: Ešte viac obdĺžnikov, pripravte si 64-bitové čísla.
+- in-large-rect.txt :: Obrovské obdĺžniky. Malo by to potrápiť triviálne
+  riešenia pomocou jednotkovej matice. Potrebný 64-bitový dátový typ.
+
+
+* Výsledky
+
+Vzorové výsledky k jednotlivým vstupom sú v súbore =out.txt=.

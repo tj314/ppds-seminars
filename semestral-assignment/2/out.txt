@@ -1,0 +1,5 @@
+in-edges.txt: 68
+in-assignment.txt: 42
+in-big.txt: 3669213
+in-bigger.txt: 38636539772
+in-large-rect.txt: 2886812994462227155
