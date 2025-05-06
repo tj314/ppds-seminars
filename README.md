@@ -15,6 +15,7 @@ ruff will help you to keep your code in accordance with PEP 8 and PEP 257. See t
 1. [Seminar 2](seminar2): Sources containing some solutions to the Fibonacci problem, the dining philosophers problem and the tree barrier. Also contains the template for the assignment.
 7. [Seminar 7](seminar7): CUDA Programmin
 8. [Seminar 8](seminar8): Parallel programming using MPI interface
+11. [Seminar 12](seminar12): Iterators, generators and coroutines via enhanced generators
 
 ## Overview of the 2025 lectures
 Lecture 7 requires `numba` and `cuda-python` modules along with CUDA toolkit installed on the system.
