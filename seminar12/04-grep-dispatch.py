@@ -17,7 +17,7 @@ def consumer(func: Callable) -> Callable:
     return wrapper
 
 
-def cat(file_: TextIO, gen: Generator[None, str, None]):
+def cat(file_: TextIO, gen: Generator[None, str, tuple[str, int]]):
     """Read file line after line.
 
     :param file_: file object from which to read.
@@ -30,8 +30,8 @@ def cat(file_: TextIO, gen: Generator[None, str, None]):
 
 @consumer
 def grep(
-    substring: str, gen: Generator[None, int, None]
-) -> Generator[None, str, None]:
+    substring: str, gen: Generator[None, int, tuple[str, int]]
+) -> Generator[None, str, tuple[str, int]]:
     """Count number of occurences of a string `substring`.
 
     :param gen: coroutine to which the number of occurences will be
@@ -46,7 +46,7 @@ def grep(
 
 
 @consumer
-def count(substring: str) -> Generator[None, int, None]:
+def count(substring: str) -> Generator[None, int, tuple[str, int]]:
     """Count number of occurences of a string `substring`.
 
     :param gen: coroutine to which the number of occurences will be
@@ -63,7 +63,7 @@ def count(substring: str) -> Generator[None, int, None]:
 @consumer
 def dispatch(
     greps: Iterable[Generator[None, str, None]],
-) -> Generator[None, str, None]:
+) -> Generator[None, str, list[tuple[str, int]]]:
     """Sum received values.
 
     The result will be printed on the screen after this coroutine is
