@@ -61,8 +61,8 @@ def count() -> Generator[None, int, int]:
 
 
 def main():
-    if len(sys.argv) < 3:
-        print('usage: grep.py string... file', file=sys.stderr)
+    if len(sys.argv) != 3:
+        print('usage: grep.py string file', file=sys.stderr)
         sys.exit(-1)
     file_ = open(sys.argv[-1])
     substring = sys.argv[1]
