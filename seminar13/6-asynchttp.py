@@ -31,11 +31,12 @@ async def main():
         await work_queue.put(url)
 
     time_start = time.perf_counter()
+
     tasks = [task('One', work_queue),
              task('Two', work_queue)]
+
     await asyncio.gather(*tasks)
-    # print(type(a))
-    # await a
+
     elapsed = time.perf_counter() - time_start
     print(f'\n Total elapsed time: {elapsed:.1f}')
 
